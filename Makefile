@@ -1,5 +1,5 @@
 BINDIR=bin
-PROBLEMS=1 2 3
+PROBLEMS=1 2 3 4 5
 BINARIES=$(PROBLEMS:%=${BINDIR}/%)
 
 NORMAL_HASKEL=ghc -o $@ $< -odir $(BINDIR) -hidir $(BINDIR) && rm $(BINDIR)/Main.*
@@ -24,3 +24,10 @@ $(BINDIR)/2: src/2.hs
 
 $(BINDIR)/3: src/3.hs
 	$(call NORMAL_HASKEL)
+
+$(BINDIR)/4: src/4.hs
+	$(call NORMAL_HASKEL)
+
+$(BINDIR)/5: src/5.hs
+	$(call NORMAL_HASKEL)
+
